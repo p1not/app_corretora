@@ -1,0 +1,13 @@
+{
+  "ordem": [
+    {
+      "id": 1,
+      "tipo": "compra",
+      "cod_acao": "BIDI4",
+      "quantidade": 3,
+      "valor_unitario": 4,
+      "valor_total": 12,
+      "status": "pendente"
+    }
+  ]
+}
