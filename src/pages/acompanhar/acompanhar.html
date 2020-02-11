@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="twitter">
+    <ion-title >
+      <div text-center>
+        <img src="assets/imgs/working_minds.png" width="40%"/>
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!--Slide 1-->
+  <ion-slides pager="true" >
+    <ion-slide>
+      <h2>Meu Patrimônio</h2>
+      <br>
+      <p>
+        Conta:  R$ 1.000,00
+      </p>
+      <p>
+        Investido: R$ 500,00
+      </p>
+      <p>
+        Patrimônio: R$ 1.500,00
+      </p>
+    </ion-slide>
+    <!--Slide 2-->
+    <ion-slide>
+      <h2>Ordens Recentes</h2>
+      <br>
+      <ion-list >
+          <ion-card *ngFor="let ordem of ordens">
+            <ion-row>
+              <ion-col><b>{{ordem.cod_acao}}</b></ion-col>
+              <ion-col><b>VALOR TOTAL</b></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>{{ordem.status}}</ion-col>
+              <ion-col>R$ {{ordem.valor_total}}</ion-col>
+            </ion-row>
+        </ion-card>   
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

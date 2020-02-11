@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar color="twitter">
+    <ion-title>
+      <div text-center>
+      <img src="assets/imgs/working_minds.png" width="40%"/>
+    </div>
+  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card padding>
+    
+    <ion-card-header>
+      <ion-row>
+        <ion-col>
+          <img src={{acao.imagem}} width="5%"/> 
+        </ion-col>
+        <ion-col>
+          <ion-row text-right>
+            <p><b>{{acao.empresa}}</b></p>
+          </ion-row>
+          <br>
+          <ion-row>
+            <p><b>{{acao.codigo}}</b></p>
+        </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-row>
+        <ion-col width="70%">Preço Atual</ion-col>
+        <ion-col width="30%">{{acao.valor}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Saldo Disponível</ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >Quantidade Ações</ion-col>
+        <ion-col>
+          <button clear><ion-icon name="remove-circle" ></ion-icon></button>
+            {{qtd}}    
+          <button clear><ion-icon name="add-circle" ></ion-icon></button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Preço por Unidade</ion-col>
+        <ion-col>{{valorUnitario}}</ion-col>
+      </ion-row>
+
+      <ion-item-divider></ion-item-divider>
+
+      <ion-row><ion-label>Resumo</ion-label></ion-row>
+      <ion-row>
+        <ion-col>{{qtd}} Ações</ion-col>
+        <ion-col>250,00</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Taxa de Corretagem</ion-col>
+        <ion-col>{{taxaCorretagem}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Taxa da B3</ion-col>
+        <ion-col>{{taxaB3}}</ion-col>
+      </ion-row>
+
+      <ion-item-divider></ion-item-divider>
+
+      <ion-row>
+        <ion-col>Total</ion-col>
+        <ion-col>R$ {{valorOrdemCompra}}</ion-col>
+      </ion-row>
+      <button ion-button (click)="comprarAcao()">Comprar</button>
+    </ion-card-content>
+
+    </ion-card>
+    
+
+</ion-content>

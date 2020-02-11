@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="twitter">
+    <ion-title>
+      <div text-center>
+        <img src="assets/imgs/working_minds.png" width="40%"/>
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-searchbar (ionInput)="getItems($event)" placeholder="Informe o código da ação"></ion-searchbar>
+  </div>
+  <br>
+  <div text-center style="font-size:25px;">Ações mais negociadas</div>
+  <br>
+  <div>
+    <ion-list>
+      <!--
+        <ion-icon name="ionic" item-start></ion-icon>
+        <button ion-button clear style="width:100%;" (click)="openPage()"><b>{{ item }}</b></button>
+      </ion-item> -->
+      <button ion-item *ngFor="let acao of acoes" (click)="openPage(acao)" >
+        <div align="center">
+          <img src={{acao.imagem}} width="40%"/>
+          <br>
+          <b>{{acao.codigo}}</b>
+        </div>
+      </button>
+    </ion-list>
+  </div>
+</ion-content>
