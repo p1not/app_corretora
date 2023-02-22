@@ -1,4 +1,4 @@
-# app_corretora
+# Exchange
 App para simulação de compra e venda de ações
 
 #inicialização
